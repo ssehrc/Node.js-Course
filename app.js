@@ -9,5 +9,7 @@ setTimeout();
 clearTimeout();
 setInterval(); 
 */
-var message = ''; //instead of window there is global
+//var message = ''; //instead of window there is global
+
+console.log(module); //not a global object 
 
