@@ -17,7 +17,7 @@ setInterval();
 const log = require('./logger');
 log('message');
 */
-
+/*
 const os = require('os');
 
 var totalMemory = os.totalmem();
@@ -29,4 +29,14 @@ console.log('Total Memory: ' + totalMemory);
 //ES6 / ES2015 : ECMAScript 6
 
 console.log(`Free Memory: ${freeMemory}`);
-console.log(`Total Memory: ${totalMemory}`);
+console.log(`Total Memory: ${totalMemory}`);*/
+
+const fs = require('fs');
+
+const files = fs.readdirSync('./');
+console.log(files);
+
+fs.readdir('./', function(err, files){
+    if(err) console.log('Error', err);
+    else console.log('Result', files);
+});
