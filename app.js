@@ -18,7 +18,15 @@ const log = require('./logger');
 log('message');
 */
 
-const path = require('path');
-var pathObj = path.parse(__filename);
+const os = require('os');
 
-console.log(pathObj);
+var totalMemory = os.totalmem();
+var freeMemory = os.freemem();
+
+console.log('Total Memory: ' + totalMemory);
+
+//template string
+//ES6 / ES2015 : ECMAScript 6
+
+console.log(`Free Memory: ${freeMemory}`);
+console.log(`Total Memory: ${totalMemory}`);
