@@ -1,4 +1,4 @@
-
+/*
     console.log(__filename);
     console.log(__dirname);
     var url = 'http://mylogger.io/log';
@@ -14,5 +14,7 @@
     exports.log = log;
 
     //exports = log; cant do this as it is a reference 
+*/
+
 
 
