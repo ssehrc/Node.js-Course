@@ -30,7 +30,7 @@ console.log('Total Memory: ' + totalMemory);
 
 console.log(`Free Memory: ${freeMemory}`);
 console.log(`Total Memory: ${totalMemory}`);*/
-
+/*
 const fs = require('fs');
 
 const files = fs.readdirSync('./');
@@ -39,4 +39,13 @@ console.log(files);
 fs.readdir('./', function(err, files){
     if(err) console.log('Error', err);
     else console.log('Result', files);
+});*/
+
+const EventEmitter = require('events');
+const emitter = new EventEmitter();
+//Register a listener
+emitter.on('messageLogged', function(){
+    console.log('Listener called');
 });
+//signaling that am event is happening
+emitter.emit('messageLogged');
